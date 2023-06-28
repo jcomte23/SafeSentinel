@@ -5,7 +5,7 @@
         {{ __('WelcomeTo') }} {{ config('app.name', 'Laravel') }}!
     </h1>
 
-    <p class="mt-6 text-gray-500 dark:text-gray-400 leading-relaxed">
+    <p class="mt-6 text-gray-500 dark:text-gray-400 leading-relaxed text-justify">
         {{ __('IntroducctionProgram') }}
     </p>
 </div>

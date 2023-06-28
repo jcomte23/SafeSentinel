@@ -8,7 +8,7 @@ class GeneralOptionsController extends Controller
 {
     function welcome()
     {
-        return view('welcome');
+        return view('index');
     }
 
     function setLang(string $locale)
