@@ -1,4 +1,4 @@
-<h1 align="center">SG-SST</h1>
+<h1 align="center">SafeSentinel</h1>
 
 <p align="center"><img src="https://i.imgur.com/dc8NIoP.png" width="200" alt="logo"></p>
 
