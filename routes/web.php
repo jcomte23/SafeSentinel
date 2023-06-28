@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GeneralOptionsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[GeneralOptionsController::class,'welcome']);
+Route::get("locale/{locale}",[GeneralOptionsController::class,'setLang'])->name('lang');
 
 Route::middleware([
     'auth:sanctum',
@@ -26,5 +26,5 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    
+
 });
