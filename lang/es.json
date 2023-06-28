@@ -1,4 +1,19 @@
 {
+    "Lang": "Idioma",
+    "WelcomeTo": "¡Bienvenido a",
+    "IntroducctionProgram": "SafeSentinel es un sistema de gestión de seguridad y salud en el trabajo potente y completo. Cumple con todas las regulaciones y normativas legales en materia de seguridad laboral. Con sus diversos módulos, permite la gestión de riesgos, prevención de accidentes, control de incidentes, evaluación de peligros, capacitación del personal y seguimiento de la conformidad legal. Proporciona un entorno laboral seguro, herramientas analíticas y generación de informes para mejorar continuamente las prácticas de seguridad y garantizar el cumplimiento normativo. Nuestro equipo de expertos en seguridad laboral está comprometido en brindar un soporte integral para el éxito de la implementación de SafeSentinel.",
+    "Documentation": "Documentación",
+    "DocumentationParagraph": "Laravel tiene una documentación maravillosa que cubre todos los aspectos del framework. Tanto si eres nuevo en el framework como si tienes experiencia previa, te recomendamos que leas toda la documentación de principio a fin.",
+    "LaracastsParagraph": "Laracasts ofrece miles de videotutoriales sobre desarrollo en Laravel, PHP y JavaScript. Échales un vistazo, compruébalo por ti mismo y mejora tus habilidades de desarrollo en el proceso.",
+    "TailwindParagraph": "Laravel Jetstream está construido con Tailwind, un increíble framework CSS de primera utilidad que no se interpone en tu camino. Usted se sorprenderá de lo fácil que puede construir y mantener diseños frescos y modernos con este maravilloso marco a su alcance.",
+    "Authentication": "Autenticación",
+    "AuthenticationParagraph": "Las vistas de autenticación y registro se incluyen con Laravel Jetstream, así como el soporte para la verificación del correo electrónico del usuario y el restablecimiento de contraseñas olvidadas. Por lo tanto, usted es libre de empezar con lo que más importa: la construcción de su aplicación.",    "Are you sure? This action cannot be reversed.":"Are you sure? This action cannot be reversed.",
+    "Options":"Opciones",
+    "Edit":"Editar",
+
+
+
+
     "(and :count more error)": "(y :count error más)",
     "(and :count more errors)": "(y :count errores más)",
     "A new verification link has been sent to the email address you provided in your profile settings.": "Se ha enviado un nuevo enlace de verificación a la dirección de correo electrónico que proporcionó en la configuración de su perfil.",
