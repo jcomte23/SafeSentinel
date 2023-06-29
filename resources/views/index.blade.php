@@ -18,13 +18,33 @@
             </div>
         @endif
 
-        <div class="max-w-7xl mx-auto p-6 lg:p-8">
-            <div class="flex justify-center">
-                <center>
-                    <a href="{{ route('welcomeGuest') }}">
-                        <img src="{{ asset('img/logoAPP.png') }}" alt="Logo Application" class="w-30">
-                    </a>
-                </center>
+        <div class="background-image rotate-animation">
+            <img src="{{ asset('img/fondoRotativo.png') }}" alt="Descripción de la imagen"
+                class="w-full sm:w-3/4 md:w-1/2 lg:w-3/4">
+        </div>
+
+        <div class="content">
+            <div x-data="{ visible: false }" x-init="setTimeout(() => { visible = true }, 500)" class="max-w-7xl mx-auto p-6 lg:p-8">
+                <div class="flex justify-center items-center flex-col">
+                    <center>
+                        <a href="{{ route('welcomeGuest') }}" x-show="visible"
+                            x-transition:enter="transition ease-out duration-500 transform"
+                            x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-300 transform"
+                            x-transition:leave-start="opacity-100 scale-100"
+                            x-transition:leave-end="opacity-0 scale-50">
+                            <img src="{{ asset('img/logoAPP.png') }}" alt="Logo Application" class="w-1/4">
+                        </a>
+                    </center>
+                    <h1 class="text-5xl font-bold mt-3 text-center" x-show="visible"
+                        x-transition:enter="transition ease-out duration-500 transform"
+                        x-transition:enter-start="opacity-0 translate-y-8"
+                        x-transition:enter-end="opacity-100 translate-y-0"
+                        style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
+                        <span class="text-blue-500">Safe</span>
+                        <span class="text-white dark:text-white">Sentinel</span>
+                    </h1>
+                </div>
             </div>
         </div>
     </div>
