@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[GeneralOptionsController::class,'welcome']);
+Route::get('/',[GeneralOptionsController::class,'welcome'])->name('welcomeGuest');
 Route::get("locale/{locale}",[GeneralOptionsController::class,'setLang'])->name('lang');
 
 Route::middleware([
