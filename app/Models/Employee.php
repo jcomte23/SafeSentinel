@@ -18,7 +18,7 @@ class Employee extends Model
     // protected $table = 'name';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
-    // protected $guarded = [];
+    protected $guarded = [];
     // protected $fillable = [
     //     'message',
     // ];
