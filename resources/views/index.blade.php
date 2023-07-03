@@ -28,7 +28,7 @@
                             x-transition:leave="transition ease-in duration-300 transform"
                             x-transition:leave-start="opacity-100 scale-100"
                             x-transition:leave-end="opacity-0 scale-50">
-                            <img src="{{ asset('img/logoAPP.png') }}" alt="Logo Application" class="w-1/4">
+                            <img src="{{ asset('img/logoAPP.webp') }}" alt="Logo Application" class="w-1/4">
                         </a>
                     </center>
                     <h1 class="text-5xl font-bold mt-3 text-center" x-show="visible"

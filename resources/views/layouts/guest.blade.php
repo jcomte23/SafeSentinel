@@ -18,7 +18,7 @@
 
 <body class="font-sans bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased">
     <div class="background-image rotate-animation">
-        <img src="{{ asset('img/fondoRotativo.png') }}" alt="Descripción de la imagen"
+        <img src="{{ asset('img/fondoRotativo.webp') }}" alt="Descripción de la imagen"
             class="w-full sm:w-3/4 md:w-1/2 lg:w-3/4">
     </div>
     {{ $slot }}
