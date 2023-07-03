@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\GeneralOptionsController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,9 +23,6 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-
+    Route::get('dashboard',[GeneralOptionsController::class,'dashboard'])->name('dashboard');
+    Route::resource('employees',EmployeeController::class);
 });

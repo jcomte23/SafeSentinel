@@ -10,7 +10,7 @@
     "AuthenticationParagraph": "Las vistas de autenticación y registro se incluyen con Laravel Jetstream, así como el soporte para la verificación del correo electrónico del usuario y el restablecimiento de contraseñas olvidadas. Por lo tanto, usted es libre de empezar con lo que más importa: la construcción de su aplicación.",    "Are you sure? This action cannot be reversed.":"Are you sure? This action cannot be reversed.",
     "Options":"Opciones",
     "Edit":"Editar",
-
+    "Employees":"Empleados",
 
 
 
