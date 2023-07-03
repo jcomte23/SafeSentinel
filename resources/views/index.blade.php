@@ -18,11 +18,6 @@
             </div>
         @endif
 
-        <div class="background-image rotate-animation">
-            <img src="{{ asset('img/fondoRotativo.png') }}" alt="Descripción de la imagen"
-                class="w-full sm:w-3/4 md:w-1/2 lg:w-3/4">
-        </div>
-
         <div class="content">
             <div x-data="{ visible: false }" x-init="setTimeout(() => { visible = true }, 500)" class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center items-center flex-col">
