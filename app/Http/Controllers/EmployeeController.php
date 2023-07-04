@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\EmployeeRequest;
 use App\Models\Employee;
+use App\Models\TypesOfDocuments;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -22,7 +23,8 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('employees.create');
+        $typesOfDocuments=TypesOfDocuments::all();
+        return view('employees.create',compact('typesOfDocuments'));
     }
 
     /**
@@ -47,7 +49,8 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        return view('employees.edit', compact('employee'));
+        $typesOfDocuments=TypesOfDocuments::all();
+        return view('employees.edit', compact('employee','typesOfDocuments'));
     }
 
     /**

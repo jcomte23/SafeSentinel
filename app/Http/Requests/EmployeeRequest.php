@@ -24,6 +24,7 @@ class EmployeeRequest extends FormRequest
         return [
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
+            'types_of_document_id' => 'required|numeric|min:0',
             'identification_number' => 'required|string|max:30',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:20',

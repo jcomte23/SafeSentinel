@@ -23,6 +23,22 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
+    <label for="types_of_document_id" class="block mb-2 font-bold dark:text-white">{{ __('types_of_document_id') }}
+        <span class="text-xs text-red-600">
+            @error('types_of_document_id')
+                ({{ $message }})
+            @enderror
+        </span>
+    </label>
+    <select type="number" name="types_of_document_id" id="types_of_document_id" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+        @foreach ($typesOfDocuments as $type)
+            <option value="{{ $type->id }}"
+                {{ @old('types_of_document_id', $employee->types_of_document_id) == $type->id ? 'selected' : '' }}>
+                ({{ $type->abbreviation }})-{{ $type->typeDocument }}</option>
+        @endforeach
+    </select>
+</div>
+<div>
     <label for="identification_number" class="block mb-2 font-bold dark:text-white">{{ __('Identification Number') }}
         <span class="text-xs text-red-600">
             @error('identification_number')
@@ -144,8 +160,7 @@
             @enderror
         </span>
     </label>
-    <input type="text" id="occupation" name="occupation"
-        value="{{ @old('occupation', $employee->occupation) }}"
+    <input type="text" id="occupation" name="occupation" value="{{ @old('occupation', $employee->occupation) }}"
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
@@ -156,8 +171,7 @@
             @enderror
         </span>
     </label>
-    <input type="text" id="work_area" name="work_area"
-        value="{{ @old('work_area', $employee->work_area) }}"
+    <input type="text" id="work_area" name="work_area" value="{{ @old('work_area', $employee->work_area) }}"
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
