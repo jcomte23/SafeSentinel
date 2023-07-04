@@ -1,7 +1,7 @@
 @csrf
 
 <div>
-    <label for="first_name" class="block mb-2 font-bold dark:text-white">First Name
+    <label for="first_name" class="block mb-2 font-bold dark:text-white">{{ __('First Name') }}
         <span class="text-xs text-red-600">
             @error('first_name')
                 ({{ $message }})
@@ -12,7 +12,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="last_name" class="block mb-2 font-bold dark:text-white">Last Name
+    <label for="last_name" class="block mb-2 font-bold dark:text-white">{{ __('Last Name') }}
         <span class="text-xs text-red-600">
             @error('last_name')
                 ({{ $message }})
@@ -23,7 +23,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="identification_number" class="block mb-2 font-bold dark:text-white">Identification Number
+    <label for="identification_number" class="block mb-2 font-bold dark:text-white">{{ __('Identification Number') }}
         <span class="text-xs text-red-600">
             @error('identification_number')
                 ({{ $message }})
@@ -35,7 +35,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="email" class="block mb-2 font-bold dark:text-white">Email
+    <label for="email" class="block mb-2 font-bold dark:text-white">{{ __('Email') }}
         <span class="text-xs text-red-600">
             @error('email')
                 ({{ $message }})
@@ -46,7 +46,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="phone" class="block mb-2 font-bold dark:text-white">Phone
+    <label for="phone" class="block mb-2 font-bold dark:text-white">{{ __('Phone') }}
         <span class="text-xs text-red-600">
             @error('phone')
                 ({{ $message }})
@@ -57,7 +57,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="optional_phone" class="block mb-2 font-bold dark:text-white">Optional Phone
+    <label for="optional_phone" class="block mb-2 font-bold dark:text-white">{{ __('Optional Phone') }}
         <span class="text-xs text-red-600">
             @error('optional_phone')
                 ({{ $message }})
@@ -69,7 +69,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="date_of_birth" class="block mb-2 font-bold dark:text-white">Date Of Birth
+    <label for="date_of_birth" class="block mb-2 font-bold dark:text-white">{{ __('Date Of Birth') }}
         <span class="text-xs text-red-600">
             @error('date_of_birth')
                 ({{ $message }})
@@ -81,7 +81,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="family_composition" class="block mb-2 font-bold dark:text-white">family_composition
+    <label for="family_composition" class="block mb-2 font-bold dark:text-white">{{ __('Family composition') }}
         <span class="text-xs text-red-600">
             @error('family_composition')
                 ({{ $message }})
@@ -93,7 +93,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="country" class="block mb-2 font-bold dark:text-white">country
+    <label for="country" class="block mb-2 font-bold dark:text-white">{{ __('Country') }}
         <span class="text-xs text-red-600">
             @error('country')
                 ({{ $message }})
@@ -104,7 +104,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="state" class="block mb-2 font-bold dark:text-white">state
+    <label for="state" class="block mb-2 font-bold dark:text-white">{{ __('State') }}
         <span class="text-xs text-red-600">
             @error('state')
                 ({{ $message }})
@@ -115,7 +115,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="city" class="block mb-2 font-bold dark:text-white">city
+    <label for="city" class="block mb-2 font-bold dark:text-white">{{ __('City') }}
         <span class="text-xs text-red-600">
             @error('city')
                 ({{ $message }})
@@ -126,7 +126,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="address" class="block mb-2 font-bold dark:text-white">address
+    <label for="address" class="block mb-2 font-bold dark:text-white">{{ __('Address') }}
         <span class="text-xs text-red-600">
             @error('address')
                 ({{ $message }})
@@ -137,7 +137,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="occupation" class="block mb-2 font-bold dark:text-white">occupation
+    <label for="occupation" class="block mb-2 font-bold dark:text-white">{{ __('Occupation') }}
         <span class="text-xs text-red-600">
             @error('occupation')
                 ({{ $message }})
@@ -149,7 +149,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="work_area" class="block mb-2 font-bold dark:text-white">work_area
+    <label for="work_area" class="block mb-2 font-bold dark:text-white">{{ __('Work Area') }}
         <span class="text-xs text-red-600">
             @error('work_area')
                 ({{ $message }})
@@ -161,7 +161,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="HdV" class="block mb-2 font-bold dark:text-white">HdV
+    <label for="HdV" class="block mb-2 font-bold dark:text-white">{{ __('HdV') }}
         <span class="text-xs text-red-600">
             @error('HdV')
                 ({{ $message }})
@@ -172,7 +172,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="EPS" class="block mb-2 font-bold dark:text-white">EPS
+    <label for="EPS" class="block mb-2 font-bold dark:text-white">{{ __('EPS') }}
         <span class="text-xs text-red-600">
             @error('EPS')
                 ({{ $message }})
@@ -183,7 +183,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="AFP" class="block mb-2 font-bold dark:text-white">AFP
+    <label for="AFP" class="block mb-2 font-bold dark:text-white">{{ __('AFP') }}
         <span class="text-xs text-red-600">
             @error('AFP')
                 ({{ $message }})
@@ -194,7 +194,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="ARL" class="block mb-2 font-bold dark:text-white">ARL
+    <label for="ARL" class="block mb-2 font-bold dark:text-white">{{ __('ARL') }}
         <span class="text-xs text-red-600">
             @error('ARL')
                 ({{ $message }})
@@ -205,7 +205,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="CCF" class="block mb-2 font-bold dark:text-white">CCF
+    <label for="CCF" class="block mb-2 font-bold dark:text-white">{{ __('CCF') }}
         <span class="text-xs text-red-600">
             @error('CCF')
                 ({{ $message }})
@@ -216,7 +216,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="emergency_contact" class="block mb-2 font-bold dark:text-white">emergency_contact
+    <label for="emergency_contact" class="block mb-2 font-bold dark:text-white">{{ __('Emergency Contact') }}
         <span class="text-xs text-red-600">
             @error('emergency_contact')
                 ({{ $message }})
@@ -228,7 +228,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="emergency_phone" class="block mb-2 font-bold dark:text-white">emergency_phone
+    <label for="emergency_phone" class="block mb-2 font-bold dark:text-white">{{ __('Emergency Phone') }}
         <span class="text-xs text-red-600">
             @error('emergency_phone')
                 ({{ $message }})
@@ -240,7 +240,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="socioeconomic_stratum" class="block mb-2 font-bold dark:text-white">socioeconomic_stratum
+    <label for="socioeconomic_stratum" class="block mb-2 font-bold dark:text-white">{{ __('socioeconomic Stratum') }}
         <span class="text-xs text-red-600">
             @error('socioeconomic_stratum')
                 ({{ $message }})
@@ -251,6 +251,6 @@
         value="{{ @old('socioeconomic_stratum', $employee->socioeconomic_stratum) }}"
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
-<div class="col-span-2">
-    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+<div class="col-span-2 flex justify-end">
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">{{ __('Save') }}</button>
 </div>
