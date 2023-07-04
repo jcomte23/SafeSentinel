@@ -21,7 +21,7 @@
                     </div>
                     <div>
                         <a href="{{ route('employees.create') }}" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                            Crear
+                            {{ __('Create') }}
                         </a>
                     </div>
                 </div>
@@ -30,27 +30,27 @@
                         <tr>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                Identification Number
+                                {{ __('Identification Number') }}
                             </th>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                First Name
+                                {{ __('First Name') }}
                             </th>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                Last Name
+                                {{ __('Last Name') }}
                             </th>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                Occupation
+                                {{ __('Occupation') }}
                             </th>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                Work Area
+                                {{ __('Work Area') }}
                             </th>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                Options
+                                {{ __('Options') }}
                             </th>
                         </tr>
                     </thead>
