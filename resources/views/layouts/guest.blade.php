@@ -5,12 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="Official website of occupational health and safety management systems" />
+    <meta name="keywords"
+        content="security,safety,health,workplace,management,system,monitoring,tracking,compliance,risk,prevention,incident,reporting,analytics,employee,wellness,occupational,ergonomics,protocols,alerts,notifications,dashboard,integration,API,modules,documentation,support,updates,version" />
+    <meta name="sitedomain" content="https://safesentinel.javiercombita.com" />
+    <meta name="organization" content="jcomte23" />
+    <meta name="author" content="Javier Cómbita Téllez" />
+    <meta name="designer" content="Javier Cómbita Téllez" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="revisit-after" content="15days" />
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
