@@ -19,6 +19,7 @@ class EmployeeFactory extends Factory
         return [
             'first_name' => $this->faker->firstName,
             'last_name' => $this->faker->lastName,
+            'types_of_document_id' => $this->faker->randomElement([1,2,3,4,5,6,7,8]),
             'identification_number' => $this->faker->unique()->randomNumber(8),
             'email' => $this->faker->unique()->safeEmail,
             'phone' => $this->faker->phoneNumber,

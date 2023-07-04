@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('first_name', 50);
             $table->string('last_name', 50);
+            $table->foreignId('types_of_document_id')
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
             $table->string('identification_number', 30)->unique();
             $table->string('email')->unique();
             $table->string('phone');
