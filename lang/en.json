@@ -17,7 +17,6 @@
     "Last Name":"Last name",
     "Occupation":"Occupation",
     "Work Area":"Work Area",
-
     "Phone":"Phone",
     "Optional Phone":"Optional Phone",
     "Date Of Birth":"Date of birth",
@@ -34,8 +33,8 @@
     "Emergency Contact":"Emergency contact",
     "Emergency Phone":"Emergency phone",
     "socioeconomic Stratum":"Socioeconomic stratum",
-
     "Type of document":"Type of document",
+    "No records available":"No records available",
 
 
 

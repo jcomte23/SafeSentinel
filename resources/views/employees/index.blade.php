@@ -38,7 +38,7 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-700">
-                        @foreach ($employees as $employee)
+                        @forelse ($employees as $employee)
                             <tr>
                                 <td class="px-2 py-3 whitespace-nowrap text-sm text-gray-500">
                                     <div x-data="{ isModalOpen: false }">
@@ -94,7 +94,11 @@
                                         class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">{{ __('Edit') }}</a>
                                 </td>
                             </tr>
-                        @endforeach
+                        @empty
+                            <tr>
+                                <td colspan="6" class="px-2 py-3 whitespace-nowrap text-sm text-gray-500 text-center">{{ __('No records available') }}</td>
+                            </tr>
+                        @endforelse
                     </tbody>
                 </table>
             </div>

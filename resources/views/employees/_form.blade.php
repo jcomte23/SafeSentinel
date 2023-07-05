@@ -30,12 +30,15 @@
             @enderror
         </span>
     </label>
-    <select type="number" name="types_of_document_id" id="types_of_document_id" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
-        @foreach ($typesOfDocuments as $type)
+    <select type="number" name="types_of_document_id" id="types_of_document_id"
+        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+        @forelse ($typesOfDocuments as $type)
             <option value="{{ $type->id }}"
                 {{ @old('types_of_document_id', $employee->types_of_document_id) == $type->id ? 'selected' : '' }}>
                 ({{ $type->abbreviation }})-{{ $type->typeDocument }}</option>
-        @endforeach
+        @empty
+            <option value="">{{ __('No records available') }}</option>
+        @endforelse
     </select>
 </div>
 <div>
