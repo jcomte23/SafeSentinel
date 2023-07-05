@@ -12,7 +12,8 @@ class TypesOfDocumentsController extends Controller
      */
     public function index()
     {
-        //
+        $typesOfDocuments=TypesOfDocuments::all();
+        return view('types_of_documents.index',compact('typesOfDocuments'));
     }
 
     /**

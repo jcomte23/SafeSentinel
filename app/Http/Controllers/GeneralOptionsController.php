@@ -16,6 +16,11 @@ class GeneralOptionsController extends Controller
         return view('dashboard');
     }
 
+    function settings()
+    {
+        return view('settings');
+    }
+
     function setLang(string $locale)
     {
         return redirect()->back()->withCookie('locale',$locale);
