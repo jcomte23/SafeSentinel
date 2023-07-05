@@ -33,6 +33,7 @@
     "Emergency Contact": "Contact d'urgence",
     "Emergency Phone": "Téléphone d'urgence",
     "socioeconomic Stratum": "Strate socio-économique",
+    "Type of document":"Type de document",
 
     "(and :count more error)": "(et :count erreur en plus)",
     "(and :count more errors)": "(et :count erreurs en plus)",

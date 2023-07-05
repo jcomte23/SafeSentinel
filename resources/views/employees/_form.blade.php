@@ -23,7 +23,7 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
-    <label for="types_of_document_id" class="block mb-2 font-bold dark:text-white">{{ __('types_of_document_id') }}
+    <label for="types_of_document_id" class="block mb-2 font-bold dark:text-white">{{ __('Type of document') }}
         <span class="text-xs text-red-600">
             @error('types_of_document_id')
                 ({{ $message }})
