@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\GeneralOptionsController;
+use App\Http\Controllers\InternationalPhoneCodesController;
 use App\Http\Controllers\TypesOfDocumentsController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,5 @@ Route::middleware([
     Route::get('settings',[GeneralOptionsController::class,'settings'])->name('settings');
     Route::resource('employees',EmployeeController::class);
     Route::resource('types_of_documents',TypesOfDocumentsController::class);
+    Route::resource('international_phone_codes',InternationalPhoneCodesController::class);
 });
