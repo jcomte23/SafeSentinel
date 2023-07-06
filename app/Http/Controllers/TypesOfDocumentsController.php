@@ -36,7 +36,7 @@ class TypesOfDocumentsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(TypesOfDocuments $typesOfDocuments)
+    public function show(TypesOfDocuments $typesOfDocument)
     {
         //
     }
@@ -44,23 +44,24 @@ class TypesOfDocumentsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(TypesOfDocuments $typesOfDocuments)
+    public function edit(TypesOfDocuments $typesOfDocument)
     {
-        return view('types_of_documents.edit',compact('typesOfDocuments'));
+        return view('types_of_documents.edit',compact('typesOfDocument'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, TypesOfDocuments $typesOfDocuments)
+    public function update(Request $request, TypesOfDocuments $typesOfDocument)
     {
-        //
+        $typesOfDocument->update($request->all());
+        return redirect()->route('types_of_documents.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(TypesOfDocuments $typesOfDocuments)
+    public function destroy(TypesOfDocuments $typesOfDocument)
     {
         //
     }

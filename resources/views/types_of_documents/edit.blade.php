@@ -13,7 +13,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                <form action="{{route('types_of_documents.update',$typesOfDocuments)}}" method="post" class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
+                <form action="{{route('types_of_documents.update',$typesOfDocument)}}" method="post" class="gap-4 p-4">
                     @method('PUT')
                     @include('types_of_documents._form')
                 </form>

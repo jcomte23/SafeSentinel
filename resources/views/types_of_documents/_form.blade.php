@@ -10,7 +10,7 @@
             </span>
         </label>
         <input type="text" id="abbreviation" name="abbreviation"
-            value="{{ @old('abbreviation', $typesOfDocuments->abbreviation) }}"
+            value="{{ @old('abbreviation', $typesOfDocument->abbreviation) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
     <div class="w-full md:w-1/2 px-3">
@@ -22,7 +22,7 @@
             </span>
         </label>
         <input type="text" id="typeDocument" name="typeDocument"
-            value="{{ @old('typeDocument', $typesOfDocuments->typeDocument) }}"
+            value="{{ @old('typeDocument', $typesOfDocument->typeDocument) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none  focus:border-blue-500">
     </div>
 </div>
@@ -36,7 +36,7 @@
     </label>
     <textarea
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none  focus:border-blue-500""
-        id="description" name="description" rows="5">{{ @old('description', $typesOfDocuments->description) }}</textarea>
+        id="description" name="description" rows="5">{{ @old('description', $typesOfDocument->description) }}</textarea>
 </div>
 <div class="col-span-2 flex justify-end">
     <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">{{ __('Save') }}</button>
