@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TypesOfDocumentsRequest;
 use App\Models\TypesOfDocuments;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,7 @@ class TypesOfDocumentsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(TypesOfDocumentsRequest $request)
     {
         TypesOfDocuments::create($request->all());
         return redirect()->route('types_of_documents.index');
@@ -52,7 +53,7 @@ class TypesOfDocumentsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, TypesOfDocuments $typesOfDocument)
+    public function update(TypesOfDocumentsRequest $request, TypesOfDocuments $typesOfDocument)
     {
         $typesOfDocument->update($request->all());
         return redirect()->route('types_of_documents.index');

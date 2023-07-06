@@ -28,7 +28,7 @@ class EmployeeRequest extends FormRequest
             'identification_number' => 'required|string|max:30',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:20',
-            'optional_phone' => 'required|string|max:20',
+            'optional_phone' => 'nullable|string|max:20',
             'date_of_birth' => 'required|date',
             'family_composition' => 'required|string',
             'country' => 'required|string|max:70',

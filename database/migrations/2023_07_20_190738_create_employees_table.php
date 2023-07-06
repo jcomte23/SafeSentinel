@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('identification_number', 30)->unique();
             $table->string('email')->unique();
             $table->string('phone');
-            $table->string('optional_phone');
+            $table->string('optional_phone')->nullable();
             $table->date('date_of_birth');
             $table->text('family_composition');
             $table->string('country');
