@@ -21,7 +21,7 @@ class TypesOfDocumentsController extends Controller
      */
     public function create()
     {
-        //
+        return view('types_of_documents.create');
     }
 
     /**
@@ -29,7 +29,8 @@ class TypesOfDocumentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        TypesOfDocuments::create($request->all());
+        return redirect()->route('types_of_documents.index');
     }
 
     /**
@@ -45,7 +46,7 @@ class TypesOfDocumentsController extends Controller
      */
     public function edit(TypesOfDocuments $typesOfDocuments)
     {
-        //
+        return view('types_of_documents.edit',compact('typesOfDocuments'));
     }
 
     /**

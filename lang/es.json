@@ -36,6 +36,8 @@
     "Type of document":"Tipo de documento",
     "No records available":"No hay registros disponibles",
     "Settings":"Ajustes",
+    "Abbreviation":"Abreviatura",
+    "Description":"Descripción",
 
 
     "(and :count more error)": "(y :count error más)",
