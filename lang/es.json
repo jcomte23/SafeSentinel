@@ -8,7 +8,7 @@
     "TailwindParagraph": "Laravel Jetstream está construido con Tailwind, un increíble framework CSS de primera utilidad que no se interpone en tu camino. Usted se sorprenderá de lo fácil que puede construir y mantener diseños frescos y modernos con este maravilloso marco a su alcance.",
     "Authentication": "Autenticación",
     "AuthenticationParagraph": "Las vistas de autenticación y registro se incluyen con Laravel Jetstream, así como el soporte para la verificación del correo electrónico del usuario y el restablecimiento de contraseñas olvidadas. Por lo tanto, usted es libre de empezar con lo que más importa: la construcción de su aplicación.",
-    "Are you sure? This action cannot be reversed.": "Are you sure? This action cannot be reversed.",
+    "Are you sure? This action cannot be reversed.": "¿Está seguro? Esta acción no puede ser revertida.",
     "Options": "Opciones",
     "Edit": "Editar",
     "Employees": "Empleados",

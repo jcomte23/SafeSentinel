@@ -63,6 +63,7 @@ class TypesOfDocumentsController extends Controller
      */
     public function destroy(TypesOfDocuments $typesOfDocument)
     {
-        //
+        $typesOfDocument->delete();
+        return redirect()->route('types_of_documents.index');
     }
 }

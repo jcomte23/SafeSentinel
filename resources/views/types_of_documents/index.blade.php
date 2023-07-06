@@ -34,7 +34,7 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-700 ">
+                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-700">
                         @forelse ($typesOfDocuments as $typesOfDocument)
                             <tr>
                                 <td class="px-2 py-3 whitespace-nowrap text-sm text-gray-500 text-center">
@@ -43,19 +43,28 @@
                                 <td class="px-2 py-3 whitespace-nowrap text-sm text-gray-500 text-center">
                                     {{ $typesOfDocument->typeDocument }}
                                 </td>
-                                <td class="px-2 py-3 text-sm text-gray-500 text-center">
+                                <td class="px-2 py-3 text-sm text-gray-500 text-center max-w-sm overflow-x-auto">
                                     {{ $typesOfDocument->description }}
                                 </td>
-                                <td class="px-2 py-3 whitespace-nowrap text-center ">
+                                <td class="px-2 py-3 whitespace-nowrap text-center flex flex-wrap justify-center">
                                     <a href="{{ route('types_of_documents.edit', $typesOfDocument->id) }}"
-                                        class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">{{ __('Edit') }}</a>
+                                        class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded mb-2 md:mb-0 md:mr-2">{{ __('Edit') }}</a>
+
+                                    <form action="{{ route('types_of_documents.destroy', $typesOfDocument->id) }}"
+                                        method="POST">
+                                        @csrf @method('DELETE')
+                                        <button type="submit"
+                                            onclick="return confirm('{{ __('Are you sure? This action cannot be reversed.') }}')"
+                                            class="bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded">{{ __('Delete') }}</button>
+                                    </form>
                                 </td>
                             </tr>
                         @empty
                             <tr>
                                 <td colspan="4"
                                     class="px-2 py-3 whitespace-nowrap text-sm text-gray-500 text-center">
-                                    {{ __('No records available') }}</td>
+                                    {{ __('No records available') }}
+                                </td>
                             </tr>
                         @endforelse
                     </tbody>
