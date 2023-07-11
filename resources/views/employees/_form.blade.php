@@ -53,17 +53,7 @@
         value="{{ @old('identification_number', $employee->identification_number) }}"
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
-<div>
-    <label for="email" class="block mb-2 font-bold dark:text-white">{{ __('Email') }}
-        <span class="text-xs text-red-600">
-            @error('email')
-                ({{ $message }})
-            @enderror
-        </span>
-    </label>
-    <input type="email" id="email" name="email" value="{{ @old('email', $employee->email) }}"
-        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
-</div>
+
 <div>
     <label for="phone" class="block mb-2 font-bold dark:text-white">{{ __('Phone') }}
         <span class="text-xs text-red-600">
@@ -85,6 +75,17 @@
     </label>
     <input type="text" id="optional_phone" name="optional_phone"
         value="{{ @old('optional_phone', $employee->optional_phone) }}"
+        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+</div>
+<div>
+    <label for="email" class="block mb-2 font-bold dark:text-white">{{ __('Email') }}
+        <span class="text-xs text-red-600">
+            @error('email')
+                ({{ $message }})
+            @enderror
+        </span>
+    </label>
+    <input type="email" id="email" name="email" value="{{ @old('email', $employee->email) }}"
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
