@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(TypesOfDocumentsSeeder::class);
+        $this->call(TypesOfGenresSeeder::class);
         //Employee::factory(10)->create();
         // \App\Models\User::factory(10)->create();
 
