@@ -42,6 +42,7 @@
     "Manages the types of documents in the application":"Administra los tipos de documentos del aplicativo",
     "Manages the telephone codes of the application":"Administra los indicativos telefónicos del aplicativo",
     "Config":"Configurar",
+    "Genre":"Género",
 
 
     "(and :count more error)": "(y :count error más)",
