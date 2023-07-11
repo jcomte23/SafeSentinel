@@ -21,7 +21,7 @@ class InternationalPhoneCodesController extends Controller
      */
     public function create()
     {
-        //
+        return view('international_phone_codes.create');
     }
 
     /**
@@ -29,7 +29,8 @@ class InternationalPhoneCodesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        InternationalPhoneCodes::create($request->all());
+        return redirect()->route('international_phone_codes.index');
     }
 
     /**
@@ -45,7 +46,7 @@ class InternationalPhoneCodesController extends Controller
      */
     public function edit(InternationalPhoneCodes $InternationalPhoneCode)
     {
-        //
+        return view('international_phone_codes.edit',compact('InternationalPhoneCode'));
     }
 
     /**
@@ -53,7 +54,8 @@ class InternationalPhoneCodesController extends Controller
      */
     public function update(Request $request, InternationalPhoneCodes $InternationalPhoneCode)
     {
-        //
+        $InternationalPhoneCode->update($request->all());
+        return redirect()->route('international_phone_codes.index');
     }
 
     /**
