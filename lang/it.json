@@ -38,6 +38,14 @@
     "Settings":"Aggiustamenti",
     "Abbreviation":"Abbreviazione",
     "Description":"Descrizione",
+    "International phone codes":"Prefissi telefonici internazionali",
+    "Manages the types of documents in the application":"Gestisce i tipi di documenti nell'applicazione",
+    "Manages the telephone codes of the application":"Gestisce i codici telefonici dell'applicazione",
+    "Config":"Configurazione",
+
+
+
+
 
     "(and :count more error)": "(e :count altro errore)",
     "(and :count more errors)": "(e :count altri errori)",

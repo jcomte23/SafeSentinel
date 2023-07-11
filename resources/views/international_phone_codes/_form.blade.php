@@ -21,7 +21,7 @@
                 @enderror
             </span>
         </label>
-        <input type="text" id="code" name="code"
+        <input type="number" id="code" name="code"
             value="{{ @old('code', $InternationalPhoneCode->code) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none  focus:border-blue-500">
     </div>

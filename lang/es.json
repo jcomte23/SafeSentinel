@@ -38,6 +38,10 @@
     "Settings":"Ajustes",
     "Abbreviation":"Abreviatura",
     "Description":"Descripción",
+    "International phone codes":"Indicativos telefónicos internacionales",
+    "Manages the types of documents in the application":"Administra los tipos de documentos del aplicativo",
+    "Manages the telephone codes of the application":"Administra los indicativos telefónicos del aplicativo",
+    "Config":"Configurar",
 
 
     "(and :count more error)": "(y :count error más)",
