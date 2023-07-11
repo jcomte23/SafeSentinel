@@ -64,6 +64,7 @@ class InternationalPhoneCodesController extends Controller
      */
     public function destroy(InternationalPhoneCodes $InternationalPhoneCode)
     {
-        //
+        $InternationalPhoneCode->delete();
+        return redirect()->route('international_phone_codes.index');
     }
 }
