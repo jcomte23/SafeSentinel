@@ -53,7 +53,25 @@
         value="{{ @old('identification_number', $employee->identification_number) }}"
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
-
+<div>
+    <label for="international_phone_code_id" class="block mb-2 font-bold dark:text-white">{{ __('International phone codes') }}
+        <span class="text-xs text-red-600">
+            @error('international_phone_code_id')
+                ({{ $message }})
+            @enderror
+        </span>
+    </label>
+    <select type="number" name="international_phone_code_id" id="international_phone_code_id"
+        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+        @forelse ($InternationalPhoneCodes as $type)
+            <option value="{{ $type->id }}"
+                {{ @old('international_phone_code_id', $employee->international_phone_code_id) == $type->id ? 'selected' : '' }}>
+                {{ $type->country }} (+{{ $type->code }})</option>
+        @empty
+            <option value="">{{ __('No records available') }}</option>
+        @endforelse
+    </select>
+</div>
 <div>
     <label for="phone" class="block mb-2 font-bold dark:text-white">{{ __('Phone') }}
         <span class="text-xs text-red-600">
@@ -62,8 +80,27 @@
             @enderror
         </span>
     </label>
-    <input type="text" id="phone" name="phone" value="{{ @old('phone', $employee->phone) }}"
+    <input type="number" id="phone" name="phone" value="{{ @old('phone', $employee->phone) }}"
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+</div>
+<div>
+    <label for="optional_international_phone_code_id" class="block mb-2 font-bold dark:text-white">{{ __('International phone codes') }}
+        <span class="text-xs text-red-600">
+            @error('optional_international_phone_code_id')
+                ({{ $message }})
+            @enderror
+        </span>
+    </label>
+    <select type="number" name="optional_international_phone_code_id" id="optional_international_phone_code_id"
+        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+        @forelse ($InternationalPhoneCodes as $type)
+            <option value="{{ $type->id }}"
+                {{ @old('optional_international_phone_code_id', $employee->optional_international_phone_code_id) == $type->id ? 'selected' : '' }}>
+                {{ $type->country }} (+{{ $type->code }})</option>
+        @empty
+            <option value="">{{ __('No records available') }}</option>
+        @endforelse
+    </select>
 </div>
 <div>
     <label for="optional_phone" class="block mb-2 font-bold dark:text-white">{{ __('Optional Phone') }}
@@ -73,7 +110,7 @@
             @enderror
         </span>
     </label>
-    <input type="text" id="optional_phone" name="optional_phone"
+    <input type="number" id="optional_phone" name="optional_phone"
         value="{{ @old('optional_phone', $employee->optional_phone) }}"
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>

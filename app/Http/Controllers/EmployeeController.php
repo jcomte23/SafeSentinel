@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\EmployeeRequest;
 use App\Models\Employee;
+use App\Models\InternationalPhoneCodes;
 use App\Models\TypesOfDocuments;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,8 @@ class EmployeeController extends Controller
     public function create()
     {
         $typesOfDocuments=TypesOfDocuments::all();
-        return view('employees.create',compact('typesOfDocuments'));
+        $InternationalPhoneCodes=InternationalPhoneCodes::orderBy('country', 'asc')->get();
+        return view('employees.create',compact('typesOfDocuments','InternationalPhoneCodes'));
     }
 
     /**
@@ -50,7 +52,8 @@ class EmployeeController extends Controller
     public function edit(Employee $employee)
     {
         $typesOfDocuments=TypesOfDocuments::all();
-        return view('employees.edit', compact('employee','typesOfDocuments'));
+        $InternationalPhoneCodes=InternationalPhoneCodes::orderBy('country', 'asc')->get();
+        return view('employees.edit', compact('employee','typesOfDocuments','InternationalPhoneCodes'));
     }
 
     /**
