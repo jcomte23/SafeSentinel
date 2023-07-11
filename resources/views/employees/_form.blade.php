@@ -283,6 +283,25 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
+    <label for="emergency_international_phone_code_id" class="block mb-2 font-bold dark:text-white">{{ __('International phone codes') }}
+        <span class="text-xs text-red-600">
+            @error('emergency_international_phone_code_id')
+                ({{ $message }})
+            @enderror
+        </span>
+    </label>
+    <select type="number" name="emergency_international_phone_code_id" id="emergency_international_phone_code_id"
+        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+        @forelse ($InternationalPhoneCodes as $type)
+            <option value="{{ $type->id }}"
+                {{ @old('emergency_international_phone_code_id', $employee->emergency_international_phone_code_id) == $type->id ? 'selected' : '' }}>
+                {{ $type->country }} (+{{ $type->code }})</option>
+        @empty
+            <option value="">{{ __('No records available') }}</option>
+        @endforelse
+    </select>
+</div>
+<div>
     <label for="emergency_phone" class="block mb-2 font-bold dark:text-white">{{ __('Emergency Phone') }}
         <span class="text-xs text-red-600">
             @error('emergency_phone')

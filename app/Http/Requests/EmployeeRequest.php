@@ -45,6 +45,7 @@ class EmployeeRequest extends FormRequest
             'ARL' => 'required|string',
             'CCF' => 'required|string',
             'emergency_contact' => 'required|string|max:50',
+            'emergency_international_phone_code_id' => 'required|numeric|min:0',
             'emergency_phone' => 'required|string|max:20',
             'socioeconomic_stratum' => 'required|string',
         ];

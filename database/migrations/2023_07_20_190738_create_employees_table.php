@@ -42,6 +42,7 @@ return new class extends Migration
             $table->string('ARL');
             $table->string('CCF');
             $table->string('emergency_contact');
+            $table->integer('emergency_international_phone_code_id');
             $table->string('emergency_phone');
             $table->string('socioeconomic_stratum');
             $table->timestamps();

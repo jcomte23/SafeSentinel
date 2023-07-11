@@ -40,6 +40,7 @@ class EmployeeFactory extends Factory
             'ARL' => $this->faker->company,
             'CCF' => $this->faker->company,
             'emergency_contact' => $this->faker->name,
+            'emergency_international_phone_code_id' => $this->faker->randomElement([1,2,3,4,5,6,7,8]),
             'emergency_phone' => $this->faker->phoneNumber,
             'socioeconomic_stratum' => $this->faker->randomElement(['Low', 'Middle', 'High']),
         ];
