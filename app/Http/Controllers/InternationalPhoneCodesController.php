@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\InternationalPhoneCodesRequest;
 use App\Models\InternationalPhoneCodes;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,7 @@ class InternationalPhoneCodesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(InternationalPhoneCodesRequest $request)
     {
         InternationalPhoneCodes::create($request->all());
         return redirect()->route('international_phone_codes.index');
@@ -52,7 +53,7 @@ class InternationalPhoneCodesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, InternationalPhoneCodes $InternationalPhoneCode)
+    public function update(InternationalPhoneCodesRequest $request, InternationalPhoneCodes $InternationalPhoneCode)
     {
         $InternationalPhoneCode->update($request->all());
         return redirect()->route('international_phone_codes.index');
