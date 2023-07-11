@@ -138,6 +138,25 @@
         class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
 </div>
 <div>
+    <label for="types_of_genre_id" class="block mb-2 font-bold dark:text-white">{{ __('Genre') }}
+        <span class="text-xs text-red-600">
+            @error('types_of_genre_id')
+                ({{ $message }})
+            @enderror
+        </span>
+    </label>
+    <select type="number" name="types_of_genre_id" id="types_of_genre_id"
+        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+        @forelse ($typesOfGenres as $type)
+            <option value="{{ $type->id }}"
+                {{ @old('types_of_genre_id', $employee->types_of_genre_id) == $type->id ? 'selected' : '' }}>
+                {{ $type->name }}</option>
+        @empty
+            <option value="">{{ __('No records available') }}</option>
+        @endforelse
+    </select>
+</div>
+<div>
     <label for="family_composition" class="block mb-2 font-bold dark:text-white">{{ __('Family composition') }}
         <span class="text-xs text-red-600">
             @error('family_composition')

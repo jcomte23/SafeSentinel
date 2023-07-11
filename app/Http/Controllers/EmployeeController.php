@@ -6,6 +6,7 @@ use App\Http\Requests\EmployeeRequest;
 use App\Models\Employee;
 use App\Models\InternationalPhoneCodes;
 use App\Models\TypesOfDocuments;
+use App\Models\TypesOfGenres;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -26,7 +27,8 @@ class EmployeeController extends Controller
     {
         $typesOfDocuments=TypesOfDocuments::all();
         $InternationalPhoneCodes=InternationalPhoneCodes::orderBy('country', 'asc')->get();
-        return view('employees.create',compact('typesOfDocuments','InternationalPhoneCodes'));
+        $typesOfGenres=TypesOfGenres::all();
+        return view('employees.create',compact('typesOfDocuments','InternationalPhoneCodes','typesOfGenres'));
     }
 
     /**
@@ -53,7 +55,8 @@ class EmployeeController extends Controller
     {
         $typesOfDocuments=TypesOfDocuments::all();
         $InternationalPhoneCodes=InternationalPhoneCodes::orderBy('country', 'asc')->get();
-        return view('employees.edit', compact('employee','typesOfDocuments','InternationalPhoneCodes'));
+        $typesOfGenres=TypesOfGenres::all();
+        return view('employees.edit', compact('employee','typesOfDocuments','InternationalPhoneCodes','typesOfGenres'));
     }
 
     /**

@@ -32,6 +32,7 @@ class EmployeeRequest extends FormRequest
             'optional_international_phone_code_id' => 'nullable|numeric|min:0',
             'optional_phone' => 'nullable|string|max:20',
             'date_of_birth' => 'required|date',
+            'types_of_genre_id' => 'required|numeric|min:0',
             'family_composition' => 'required|string',
             'country' => 'required|string|max:70',
             'state' => 'required|string|max:70',
