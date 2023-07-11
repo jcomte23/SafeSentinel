@@ -101,6 +101,9 @@
                         @endforelse
                     </tbody>
                 </table>
+                <div class="flex justify-center text-lg py-4">
+                    {{ $employees->links() }}
+                </div>
             </div>
         </div>
     </div>

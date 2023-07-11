@@ -69,6 +69,9 @@
                         @endforelse
                     </tbody>
                 </table>
+                <div class="flex justify-center text-lg py-4">
+                    {{ $typesOfDocuments->links() }}
+                </div>
             </div>
         </div>
     </div>

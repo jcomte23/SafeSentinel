@@ -13,7 +13,7 @@ class TypesOfDocumentsController extends Controller
      */
     public function index()
     {
-        $typesOfDocuments=TypesOfDocuments::all();
+        $typesOfDocuments=TypesOfDocuments::orderBy('abbreviation', 'asc')->paginate(10);
         return view('types_of_documents.index',compact('typesOfDocuments'));
     }
 
