@@ -16,13 +16,14 @@
                 <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                     <thead class="bg-blue-200 dark:bg-blue-900 text-gray-500 dark:text-white ">
                         <tr>
-                            <th scope="col"
-                                class="px-0 py-3 text-center text-left text-xs font-medium uppercase tracking-wider">
-                                {{ __('Code') }}
-                            </th>
+                            
                             <th scope="col"
                                 class="px-2 py-3 text-center text-left text-xs font-medium uppercase tracking-wider">
                                 {{ __('Country') }}
+                            </th>
+                            <th scope="col"
+                                class="px-0 py-3 text-center text-left text-xs font-medium uppercase tracking-wider">
+                                {{ __('Code') }}
                             </th>
                             <th scope="col"
                                 class="px-2 py-3 text-center text-xs font-medium uppercase tracking-wider mx-auto">
@@ -31,19 +32,19 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-700">
-                        @forelse ($typesOfDocuments as $typesOfDocument)
+                        @forelse ($InternationalPhoneCodes as $InternationalPhoneCode)
                             <tr>
                                 <td class="px-2 py-3 whitespace-nowrap text-sm text-gray-500 text-center">
-                                    {{ $typesOfDocument->code }}
+                                    {{ $InternationalPhoneCode->country }}
                                 </td>
                                 <td class="px-2 py-3 whitespace-nowrap text-sm text-gray-500 text-center">
-                                    {{ $typesOfDocument->country }}
+                                    {{ $InternationalPhoneCode->code }}
                                 </td>
                                 <td class="px-2 py-3 whitespace-nowrap text-center flex flex-wrap justify-center">
-                                    <a href="{{ route('international_phone_codes.edit', $typesOfDocument->id) }}"
+                                    <a href="{{ route('international_phone_codes.edit', $InternationalPhoneCode->id) }}"
                                         class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded mb-2 md:mb-0 md:mr-2">{{ __('Edit') }}</a>
 
-                                    <form action="{{ route('international_phone_codes.destroy', $typesOfDocument->id) }}"
+                                    <form action="{{ route('international_phone_codes.destroy', $InternationalPhoneCode->id) }}"
                                         method="POST">
                                         @csrf @method('DELETE')
                                         <button type="submit"

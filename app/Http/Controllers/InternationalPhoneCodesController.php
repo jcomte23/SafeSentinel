@@ -12,7 +12,8 @@ class InternationalPhoneCodesController extends Controller
      */
     public function index()
     {
-        //
+        $InternationalPhoneCodes = InternationalPhoneCodes::orderBy('country', 'asc')->paginate(10);
+        return view('international_phone_codes.index',compact('InternationalPhoneCodes'));
     }
 
     /**
@@ -34,7 +35,7 @@ class InternationalPhoneCodesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(InternationalPhoneCodes $internationalPhoneCodes)
+    public function show(InternationalPhoneCodes $InternationalPhoneCode)
     {
         //
     }
@@ -42,7 +43,7 @@ class InternationalPhoneCodesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(InternationalPhoneCodes $internationalPhoneCodes)
+    public function edit(InternationalPhoneCodes $InternationalPhoneCode)
     {
         //
     }
@@ -50,7 +51,7 @@ class InternationalPhoneCodesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, InternationalPhoneCodes $internationalPhoneCodes)
+    public function update(Request $request, InternationalPhoneCodes $InternationalPhoneCode)
     {
         //
     }
@@ -58,7 +59,7 @@ class InternationalPhoneCodesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(InternationalPhoneCodes $internationalPhoneCodes)
+    public function destroy(InternationalPhoneCodes $InternationalPhoneCode)
     {
         //
     }
