@@ -360,20 +360,20 @@
         </select>
     </div>
 
-    {{-- salarios --}}
+    {{-- jornada laboral --}}
     <div>
-        <label for="salary_id" class="block mb-2 font-bold dark:text-white">{{ __('Salary') }}
+        <label for="work_schedule_id" class="block mb-2 font-bold dark:text-white">{{ __('Work schedule') }}
             <span class="text-xs text-red-600">
-                @error('salary_id')
+                @error('work_schedule_id')
                     ({{ $message }})
                 @enderror
             </span>
         </label>
-        <select type="number" name="salary_id" id="salary_id"
+        <select type="number" name="work_schedule_id" id="work_schedule_id"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
-            @forelse ($salaries as $type)
+            @forelse ($workSchedules as $type)
                 <option value="{{ $type->id }}"
-                    {{ @old('salary_id', $employee->salary_id) == $type->id ? 'selected' : '' }}>
+                    {{ @old('work_schedule_id', $employee->work_schedule_id) == $type->id ? 'selected' : '' }}>
                     {{ $type->name }}</option>
             @empty
                 <option value="">{{ __('No records available') }}</option>

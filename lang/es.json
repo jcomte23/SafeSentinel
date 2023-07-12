@@ -47,6 +47,7 @@
     "Civil status":"Estado civil",
     "School grade":"Nivel escolar",
     "Salary":"Salario",
+    "Work schedule":"Jornada laboral",
 
 
     "(and :count more error)": "(y :count error más)",

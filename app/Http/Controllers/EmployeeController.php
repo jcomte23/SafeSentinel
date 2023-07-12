@@ -11,6 +11,7 @@ use App\Models\Salary;
 use App\Models\SchoolGrades;
 use App\Models\TypesOfDocuments;
 use App\Models\TypesOfGenres;
+use App\Models\WorkSchedules;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -36,6 +37,7 @@ class EmployeeController extends Controller
         $civilStatus = CivilStatus::all();
         $schoolGrades = SchoolGrades::all();
         $salaries = Salary::all();
+        $workSchedules = WorkSchedules::all();
         return view('employees.create', 
         compact('typesOfDocuments',
         'InternationalPhoneCodes', 
@@ -43,7 +45,8 @@ class EmployeeController extends Controller
         'bloodTypes',
         'civilStatus',
         'schoolGrades',
-        'salaries'));
+        'salaries',
+        'workSchedules'));
     }
 
     /**
@@ -75,13 +78,15 @@ class EmployeeController extends Controller
         $civilStatus = CivilStatus::all();
         $schoolGrades = SchoolGrades::all();
         $salaries = Salary::all();
+        $workSchedules = WorkSchedules::all();
         return view('employees.edit', compact('typesOfDocuments',
         'InternationalPhoneCodes', 
         'typesOfGenres',
         'bloodTypes',
         'civilStatus',
         'schoolGrades',
-        'salaries'));
+        'salaries',
+        'workSchedules'));
     }
 
     /**
