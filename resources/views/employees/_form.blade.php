@@ -157,6 +157,25 @@
     </select>
 </div>
 <div>
+    <label for="blood_type_id" class="block mb-2 font-bold dark:text-white">{{ __('Blood type') }}
+        <span class="text-xs text-red-600">
+            @error('blood_type_id')
+                ({{ $message }})
+            @enderror
+        </span>
+    </label>
+    <select type="number" name="blood_type_id" id="blood_type_id"
+        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+        @forelse ($bloodTypes as $type)
+            <option value="{{ $type->id }}"
+                {{ @old('blood_type_id', $employee->blood_type_id) == $type->id ? 'selected' : '' }}>
+                {{ $type->abbreviation }}</option>
+        @empty
+            <option value="">{{ __('No records available') }}</option>
+        @endforelse
+    </select>
+</div>
+<div>
     <label for="family_composition" class="block mb-2 font-bold dark:text-white">{{ __('Family composition') }}
         <span class="text-xs text-red-600">
             @error('family_composition')

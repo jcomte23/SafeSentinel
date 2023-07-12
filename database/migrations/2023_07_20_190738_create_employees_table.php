@@ -32,6 +32,10 @@ return new class extends Migration
                 ->constrained()
                 ->cascadeOnUpdate()
                 ->restrictOnDelete();
+            $table->foreignId('blood_type_id')
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
             $table->date('date_of_birth');
             $table->text('family_composition');
             $table->string('country');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EmployeeRequest;
+use App\Models\BloodTypes;
 use App\Models\Employee;
 use App\Models\InternationalPhoneCodes;
 use App\Models\TypesOfDocuments;
@@ -28,7 +29,8 @@ class EmployeeController extends Controller
         $typesOfDocuments=TypesOfDocuments::all();
         $InternationalPhoneCodes=InternationalPhoneCodes::orderBy('country', 'asc')->get();
         $typesOfGenres=TypesOfGenres::all();
-        return view('employees.create',compact('typesOfDocuments','InternationalPhoneCodes','typesOfGenres'));
+        $bloodTypes=BloodTypes::all();
+        return view('employees.create',compact('typesOfDocuments','InternationalPhoneCodes','typesOfGenres','bloodTypes'));
     }
 
     /**
