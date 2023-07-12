@@ -37,6 +37,10 @@ return new class extends Migration
                 ->cascadeOnUpdate()
                 ->restrictOnDelete();
             $table->date('date_of_birth');
+            $table->foreignId('civil_status_id')
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
             $table->text('family_composition');
             $table->string('country');
             $table->string('state');

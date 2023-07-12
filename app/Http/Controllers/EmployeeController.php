@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\EmployeeRequest;
 use App\Models\BloodTypes;
+use App\Models\CivilStatus;
 use App\Models\Employee;
 use App\Models\InternationalPhoneCodes;
 use App\Models\TypesOfDocuments;
@@ -30,7 +31,8 @@ class EmployeeController extends Controller
         $InternationalPhoneCodes=InternationalPhoneCodes::orderBy('country', 'asc')->get();
         $typesOfGenres=TypesOfGenres::all();
         $bloodTypes=BloodTypes::all();
-        return view('employees.create',compact('typesOfDocuments','InternationalPhoneCodes','typesOfGenres','bloodTypes'));
+        $civilStatus=CivilStatus::all();
+        return view('employees.create',compact('typesOfDocuments','InternationalPhoneCodes','typesOfGenres','bloodTypes','civilStatus'));
     }
 
     /**
@@ -58,7 +60,9 @@ class EmployeeController extends Controller
         $typesOfDocuments=TypesOfDocuments::all();
         $InternationalPhoneCodes=InternationalPhoneCodes::orderBy('country', 'asc')->get();
         $typesOfGenres=TypesOfGenres::all();
-        return view('employees.edit', compact('employee','typesOfDocuments','InternationalPhoneCodes','typesOfGenres'));
+        $bloodTypes=BloodTypes::all();
+        $civilStatus=CivilStatus::all();
+        return view('employees.edit', compact('employee','typesOfDocuments','InternationalPhoneCodes','typesOfGenres','bloodTypes','civilStatus'));
     }
 
     /**

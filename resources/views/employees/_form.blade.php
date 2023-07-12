@@ -200,6 +200,27 @@
     </div>
 </section>
 <section class="p-4 pt-0">
+    {{-- estado civil --}}
+    <div>
+        <label for="civil_status_id"
+            class="block mb-2 font-bold dark:text-white">{{ __('Civil status') }}
+            <span class="text-xs text-red-600">
+                @error('civil_status_id')
+                    ({{ $message }})
+                @enderror
+            </span>
+        </label>
+        <select type="number" name="civil_status_id" id="civil_status_id"
+            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+            @forelse ($civilStatus as $type)
+                <option value="{{ $type->id }}"
+                    {{ @old('civil_status_id', $employee->civil_status_id) == $type->id ? 'selected' : '' }}>
+                    {{ $type->name }}</option>
+            @empty
+                <option value="">{{ __('No records available') }}</option>
+            @endforelse
+        </select>
+    </div>
     {{-- composicion familiar --}}
     <div>
         <label for="family_composition" class="block mb-2 font-bold dark:text-white">{{ __('Family composition') }}
@@ -267,6 +288,7 @@
     </div>
 </section>
 <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 pt-0">
+    {{-- Ocupacion --}}
     <div>
         <label for="occupation" class="block mb-2 font-bold dark:text-white">{{ __('Occupation') }}
             <span class="text-xs text-red-600">
@@ -279,6 +301,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
     
+    {{-- Area de trabajo --}}
     <div>
         <label for="work_area" class="block mb-2 font-bold dark:text-white">{{ __('Work Area') }}
             <span class="text-xs text-red-600">
@@ -291,6 +314,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
     
+    {{-- Hoja de vida --}}
     <div>
         <label for="HdV" class="block mb-2 font-bold dark:text-white">{{ __('HdV') }}
             <span class="text-xs text-red-600">
@@ -303,6 +327,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
     
+    {{-- EPS--}}
     <div>
         <label for="EPS" class="block mb-2 font-bold dark:text-white">{{ __('EPS') }}
             <span class="text-xs text-red-600">
@@ -315,6 +340,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
     
+    {{-- AFP--}}
     <div>
         <label for="AFP" class="block mb-2 font-bold dark:text-white">{{ __('AFP') }}
             <span class="text-xs text-red-600">
@@ -327,6 +353,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
     
+    {{-- ARL--}}
     <div>
         <label for="ARL" class="block mb-2 font-bold dark:text-white">{{ __('ARL') }}
             <span class="text-xs text-red-600">
@@ -339,6 +366,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
     
+    {{-- CCF--}}
     <div>
         <label for="CCF" class="block mb-2 font-bold dark:text-white">{{ __('CCF') }}
             <span class="text-xs text-red-600">
@@ -351,6 +379,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
     
+    {{-- CONTACTO DE EMERGENCIA--}}
     <div>
         <label for="emergency_contact" class="block mb-2 font-bold dark:text-white">{{ __('Emergency Contact') }}
             <span class="text-xs text-red-600">
@@ -384,7 +413,6 @@
             @endforelse
         </select>
     </div>
-    
     <div>
         <label for="emergency_phone" class="block mb-2 font-bold dark:text-white">{{ __('Emergency Phone') }}
             <span class="text-xs text-red-600">
@@ -398,6 +426,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
     
+    {{-- ESTRATO SOCIECONOMICO--}}
     <div>
         <label for="socioeconomic_stratum"
             class="block mb-2 font-bold dark:text-white">{{ __('socioeconomic Stratum') }}

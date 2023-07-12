@@ -34,6 +34,7 @@ class EmployeeRequest extends FormRequest
             'date_of_birth' => 'required|date',
             'types_of_genre_id' => 'required|numeric|min:0',
             'blood_type_id' => 'required|numeric|min:0',
+            'civil_status_id' => 'required|numeric|min:0',
             'family_composition' => 'required|string',
             'country' => 'required|string|max:70',
             'state' => 'required|string|max:70',

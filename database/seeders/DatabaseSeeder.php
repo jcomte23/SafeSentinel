@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TypesOfDocumentsSeeder::class);
         $this->call(TypesOfGenresSeeder::class);
         $this->call(BloodTypesSeeder::class);
+        $this->call(CivilStatusSeeder::class);
         //Employee::factory(10)->create();
         // \App\Models\User::factory(10)->create();
 

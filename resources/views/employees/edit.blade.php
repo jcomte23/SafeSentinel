@@ -12,8 +12,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                <form action="{{ route('employees.update', $employee) }}" method="post"
-                    class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
+                <form action="{{ route('employees.update', $employee) }}" method="post">
                     @method('PUT')
                     @include('employees._form')
                 </form>
