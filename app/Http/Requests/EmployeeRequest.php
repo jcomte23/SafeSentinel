@@ -40,6 +40,7 @@ class EmployeeRequest extends FormRequest
             'state' => 'required|string|max:70',
             'city' => 'required|string|max:70',
             'address' => 'required|string',
+            'school_grade_id' => 'required|numeric|min:0',
             'occupation' => 'required|string|max:50',
             'work_area' => 'required|string|max:50',
             'HdV' => 'required|string',

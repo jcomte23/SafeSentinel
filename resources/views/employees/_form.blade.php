@@ -313,6 +313,28 @@
         <input type="text" id="work_area" name="work_area" value="{{ @old('work_area', $employee->work_area) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
+
+    {{-- grado de escolaridad --}}
+    <div>
+        <label for="school_grade_id"
+            class="block mb-2 font-bold dark:text-white">{{ __('School grade') }}
+            <span class="text-xs text-red-600">
+                @error('school_grade_id')
+                    ({{ $message }})
+                @enderror
+            </span>
+        </label>
+        <select type="number" name="school_grade_id" id="school_grade_id"
+            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+            @forelse ($schoolGrades as $type)
+                <option value="{{ $type->id }}"
+                    {{ @old('school_grade_id', $employee->school_grade_id) == $type->id ? 'selected' : '' }}>
+                    {{ $type->name }}</option>
+            @empty
+                <option value="">{{ __('No records available') }}</option>
+            @endforelse
+        </select>
+    </div>
     
     {{-- Hoja de vida --}}
     <div>

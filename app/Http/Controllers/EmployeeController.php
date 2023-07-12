@@ -7,6 +7,7 @@ use App\Models\BloodTypes;
 use App\Models\CivilStatus;
 use App\Models\Employee;
 use App\Models\InternationalPhoneCodes;
+use App\Models\SchoolGrades;
 use App\Models\TypesOfDocuments;
 use App\Models\TypesOfGenres;
 use Illuminate\Http\Request;
@@ -18,8 +19,8 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees=Employee::orderBy('identification_number', 'asc')->paginate(10);
-        return view('employees.index',compact('employees'));
+        $employees = Employee::orderBy('identification_number', 'asc')->paginate(10);
+        return view('employees.index', compact('employees'));
     }
 
     /**
@@ -27,12 +28,13 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        $typesOfDocuments=TypesOfDocuments::all();
-        $InternationalPhoneCodes=InternationalPhoneCodes::orderBy('country', 'asc')->get();
-        $typesOfGenres=TypesOfGenres::all();
-        $bloodTypes=BloodTypes::all();
-        $civilStatus=CivilStatus::all();
-        return view('employees.create',compact('typesOfDocuments','InternationalPhoneCodes','typesOfGenres','bloodTypes','civilStatus'));
+        $typesOfDocuments = TypesOfDocuments::all();
+        $InternationalPhoneCodes = InternationalPhoneCodes::orderBy('country', 'asc')->get();
+        $typesOfGenres = TypesOfGenres::all();
+        $bloodTypes = BloodTypes::all();
+        $civilStatus = CivilStatus::all();
+        $schoolGrades = SchoolGrades::all();
+        return view('employees.create', compact('typesOfDocuments', 'InternationalPhoneCodes', 'typesOfGenres', 'bloodTypes', 'civilStatus', 'schoolGrades'));
     }
 
     /**
@@ -57,12 +59,13 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        $typesOfDocuments=TypesOfDocuments::all();
-        $InternationalPhoneCodes=InternationalPhoneCodes::orderBy('country', 'asc')->get();
-        $typesOfGenres=TypesOfGenres::all();
-        $bloodTypes=BloodTypes::all();
-        $civilStatus=CivilStatus::all();
-        return view('employees.edit', compact('employee','typesOfDocuments','InternationalPhoneCodes','typesOfGenres','bloodTypes','civilStatus'));
+        $typesOfDocuments = TypesOfDocuments::all();
+        $InternationalPhoneCodes = InternationalPhoneCodes::orderBy('country', 'asc')->get();
+        $typesOfGenres = TypesOfGenres::all();
+        $bloodTypes = BloodTypes::all();
+        $civilStatus = CivilStatus::all();
+        $schoolGrades = SchoolGrades::all();
+        return view('employees.edit', compact('employee', 'typesOfDocuments', 'InternationalPhoneCodes', 'typesOfGenres', 'bloodTypes', 'civilStatus', 'schoolGrades'));
     }
 
     /**
@@ -79,6 +82,5 @@ class EmployeeController extends Controller
      */
     public function destroy(Employee $employee)
     {
-        
     }
 }

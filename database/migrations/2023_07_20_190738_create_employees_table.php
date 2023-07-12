@@ -48,6 +48,10 @@ return new class extends Migration
             $table->string('address');
             $table->string('occupation');
             $table->string('work_area');
+            $table->foreignId('school_grade_id')
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
             $table->string('HdV');
             $table->string('EPS');
             $table->string('AFP');
