@@ -52,6 +52,10 @@ return new class extends Migration
                 ->constrained()
                 ->cascadeOnUpdate()
                 ->restrictOnDelete();
+            $table->foreignId('salary_id')
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
             $table->string('HdV');
             $table->string('EPS');
             $table->string('AFP');

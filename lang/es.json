@@ -46,6 +46,7 @@
     "Blood type":"Tipo de sangre",
     "Civil status":"Estado civil",
     "School grade":"Nivel escolar",
+    "Salary":"Salario",
 
 
     "(and :count more error)": "(y :count error más)",

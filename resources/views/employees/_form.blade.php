@@ -202,8 +202,7 @@
 <section class="p-4 pt-0">
     {{-- estado civil --}}
     <div>
-        <label for="civil_status_id"
-            class="block mb-2 font-bold dark:text-white">{{ __('Civil status') }}
+        <label for="civil_status_id" class="block mb-2 font-bold dark:text-white">{{ __('Civil status') }}
             <span class="text-xs text-red-600">
                 @error('civil_status_id')
                     ({{ $message }})
@@ -273,6 +272,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
 </section>
+
 <section class="p-4 pt-0">
     {{-- Dirección --}}
     <div>
@@ -287,6 +287,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
 </section>
+
 <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 pt-0">
     {{-- Ocupacion --}}
     <div>
@@ -297,10 +298,11 @@
                 @enderror
             </span>
         </label>
-        <input type="text" id="occupation" name="occupation" value="{{ @old('occupation', $employee->occupation) }}"
+        <input type="text" id="occupation" name="occupation"
+            value="{{ @old('occupation', $employee->occupation) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
-    
+
     {{-- Area de trabajo --}}
     <div>
         <label for="work_area" class="block mb-2 font-bold dark:text-white">{{ __('Work Area') }}
@@ -313,11 +315,12 @@
         <input type="text" id="work_area" name="work_area" value="{{ @old('work_area', $employee->work_area) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
+</section>
 
+<section class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 pt-0">
     {{-- grado de escolaridad --}}
     <div>
-        <label for="school_grade_id"
-            class="block mb-2 font-bold dark:text-white">{{ __('School grade') }}
+        <label for="school_grade_id" class="block mb-2 font-bold dark:text-white">{{ __('School grade') }}
             <span class="text-xs text-red-600">
                 @error('school_grade_id')
                     ({{ $message }})
@@ -335,7 +338,53 @@
             @endforelse
         </select>
     </div>
-    
+
+    {{-- salarios --}}
+    <div>
+        <label for="salary_id" class="block mb-2 font-bold dark:text-white">{{ __('Salary') }}
+            <span class="text-xs text-red-600">
+                @error('salary_id')
+                    ({{ $message }})
+                @enderror
+            </span>
+        </label>
+        <select type="number" name="salary_id" id="salary_id"
+            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+            @forelse ($salaries as $type)
+                <option value="{{ $type->id }}"
+                    {{ @old('salary_id', $employee->salary_id) == $type->id ? 'selected' : '' }}>
+                    {{ $type->name }}</option>
+            @empty
+                <option value="">{{ __('No records available') }}</option>
+            @endforelse
+        </select>
+    </div>
+
+    {{-- salarios --}}
+    <div>
+        <label for="salary_id" class="block mb-2 font-bold dark:text-white">{{ __('Salary') }}
+            <span class="text-xs text-red-600">
+                @error('salary_id')
+                    ({{ $message }})
+                @enderror
+            </span>
+        </label>
+        <select type="number" name="salary_id" id="salary_id"
+            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+            @forelse ($salaries as $type)
+                <option value="{{ $type->id }}"
+                    {{ @old('salary_id', $employee->salary_id) == $type->id ? 'selected' : '' }}>
+                    {{ $type->name }}</option>
+            @empty
+                <option value="">{{ __('No records available') }}</option>
+            @endforelse
+        </select>
+    </div>
+</section>
+
+<section class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 pt-0">
+
+
     {{-- Hoja de vida --}}
     <div>
         <label for="HdV" class="block mb-2 font-bold dark:text-white">{{ __('HdV') }}
@@ -348,8 +397,8 @@
         <input type="text" id="HdV" name="HdV" value="{{ @old('HdV', $employee->HdV) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
-    
-    {{-- EPS--}}
+
+    {{-- EPS --}}
     <div>
         <label for="EPS" class="block mb-2 font-bold dark:text-white">{{ __('EPS') }}
             <span class="text-xs text-red-600">
@@ -361,8 +410,8 @@
         <input type="text" id="EPS" name="EPS" value="{{ @old('EPS', $employee->EPS) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
-    
-    {{-- AFP--}}
+
+    {{-- AFP --}}
     <div>
         <label for="AFP" class="block mb-2 font-bold dark:text-white">{{ __('AFP') }}
             <span class="text-xs text-red-600">
@@ -374,8 +423,8 @@
         <input type="text" id="AFP" name="AFP" value="{{ @old('AFP', $employee->AFP) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
-    
-    {{-- ARL--}}
+
+    {{-- ARL --}}
     <div>
         <label for="ARL" class="block mb-2 font-bold dark:text-white">{{ __('ARL') }}
             <span class="text-xs text-red-600">
@@ -387,8 +436,8 @@
         <input type="text" id="ARL" name="ARL" value="{{ @old('ARL', $employee->ARL) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
-    
-    {{-- CCF--}}
+
+    {{-- CCF --}}
     <div>
         <label for="CCF" class="block mb-2 font-bold dark:text-white">{{ __('CCF') }}
             <span class="text-xs text-red-600">
@@ -400,8 +449,8 @@
         <input type="text" id="CCF" name="CCF" value="{{ @old('CCF', $employee->CCF) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
-    
-    {{-- CONTACTO DE EMERGENCIA--}}
+
+    {{-- CONTACTO DE EMERGENCIA --}}
     <div>
         <label for="emergency_contact" class="block mb-2 font-bold dark:text-white">{{ __('Emergency Contact') }}
             <span class="text-xs text-red-600">
@@ -414,7 +463,7 @@
             value="{{ @old('emergency_contact', $employee->emergency_contact) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
-    
+
     <div>
         <label for="emergency_international_phone_code_id"
             class="block mb-2 font-bold dark:text-white">{{ __('International phone codes') }}
@@ -424,7 +473,8 @@
                 @enderror
             </span>
         </label>
-        <select type="number" name="emergency_international_phone_code_id" id="emergency_international_phone_code_id"
+        <select type="number" name="emergency_international_phone_code_id"
+            id="emergency_international_phone_code_id"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
             @forelse ($InternationalPhoneCodes as $type)
                 <option value="{{ $type->id }}"
@@ -447,8 +497,8 @@
             value="{{ @old('emergency_phone', $employee->emergency_phone) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
-    
-    {{-- ESTRATO SOCIECONOMICO--}}
+
+    {{-- ESTRATO SOCIECONOMICO --}}
     <div>
         <label for="socioeconomic_stratum"
             class="block mb-2 font-bold dark:text-white">{{ __('socioeconomic Stratum') }}
@@ -462,7 +512,7 @@
             value="{{ @old('socioeconomic_stratum', $employee->socioeconomic_stratum) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
-    
+
     <div class="col-span-2 flex justify-end">
         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">{{ __('Save') }}</button>
     </div>

@@ -7,6 +7,7 @@ use App\Models\BloodTypes;
 use App\Models\CivilStatus;
 use App\Models\Employee;
 use App\Models\InternationalPhoneCodes;
+use App\Models\Salary;
 use App\Models\SchoolGrades;
 use App\Models\TypesOfDocuments;
 use App\Models\TypesOfGenres;
@@ -34,7 +35,15 @@ class EmployeeController extends Controller
         $bloodTypes = BloodTypes::all();
         $civilStatus = CivilStatus::all();
         $schoolGrades = SchoolGrades::all();
-        return view('employees.create', compact('typesOfDocuments', 'InternationalPhoneCodes', 'typesOfGenres', 'bloodTypes', 'civilStatus', 'schoolGrades'));
+        $salaries = Salary::all();
+        return view('employees.create', 
+        compact('typesOfDocuments',
+        'InternationalPhoneCodes', 
+        'typesOfGenres',
+        'bloodTypes',
+        'civilStatus',
+        'schoolGrades',
+        'salaries'));
     }
 
     /**
@@ -65,7 +74,14 @@ class EmployeeController extends Controller
         $bloodTypes = BloodTypes::all();
         $civilStatus = CivilStatus::all();
         $schoolGrades = SchoolGrades::all();
-        return view('employees.edit', compact('employee', 'typesOfDocuments', 'InternationalPhoneCodes', 'typesOfGenres', 'bloodTypes', 'civilStatus', 'schoolGrades'));
+        $salaries = Salary::all();
+        return view('employees.edit', compact('typesOfDocuments',
+        'InternationalPhoneCodes', 
+        'typesOfGenres',
+        'bloodTypes',
+        'civilStatus',
+        'schoolGrades',
+        'salaries'));
     }
 
     /**

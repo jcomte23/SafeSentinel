@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(BloodTypesSeeder::class);
         $this->call(CivilStatusSeeder::class);
         $this->call(SchoolGradesSeeder::class);
+        $this->call(SalarySeeder::class);
         //Employee::factory(10)->create();
         // \App\Models\User::factory(10)->create();
 
