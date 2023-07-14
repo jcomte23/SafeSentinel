@@ -41,36 +41,16 @@
                         @forelse ($employees as $employee)
                             <tr>
                                 <td class="px-2 py-3 whitespace-nowrap text-sm text-gray-500">
-                                    <div x-data="{ isModalOpen: false }">
-                                        <!-- Botón para abrir el modal -->
-                                        @if (true)
-                                            <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
-                                                @click="isModalOpen = true">
-                                                Estate
+                                    <div>
+                                        @if ($employee->state_id==1)
+                                            <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+                                                Active
                                             </button>
                                         @else
-                                            <button class="bg-blue-500 text-white px-4 py-2 rounded"
-                                                @click="isModalOpen = true">
-                                                Estate
+                                            <button class="bg-blue-500 text-white px-4 py-2 rounded">
+                                                InActive
                                             </button>
                                         @endif
-                                        <!-- Modal -->
-                                        <div x-show="isModalOpen"
-                                            class="fixed z-10 inset-0 overflow-y-auto flex items-center justify-center">
-                                            <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-lg">
-                                                <!-- Contenido del modal aquí -->
-                                                <h2 class="text-2xl font-bold mb-4">Modal Title</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at
-                                                    est id nibh ultricies blandit.</p>
-
-                                                <!-- Botón para cerrar el modal -->
-                                                <button
-                                                    class="bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-bold py-2 px-4 rounded mt-4"
-                                                    @click="isModalOpen = false">
-                                                    Cerrar
-                                                </button>
-                                            </div>
-                                        </div>
                                     </div>
                                 </td>
                                 <td class="px-2 py-3 whitespace-nowrap text-sm text-gray-500">

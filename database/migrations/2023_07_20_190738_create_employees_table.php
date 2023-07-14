@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('state_id')->default(1)
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
             $table->string('first_name', 50);
             $table->string('last_name', 50);
             $table->foreignId('types_of_document_id')
