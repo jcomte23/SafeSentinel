@@ -48,6 +48,7 @@
     "School grade":"Nivel escolar",
     "Salary":"Salario",
     "Work schedule":"Jornada laboral",
+    "Current contract":"Contrato actual",
 
 
     "(and :count more error)": "(y :count error más)",

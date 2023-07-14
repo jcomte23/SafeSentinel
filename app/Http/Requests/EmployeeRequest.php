@@ -46,6 +46,7 @@ class EmployeeRequest extends FormRequest
             'occupation' => 'required|string|max:50',
             'work_area' => 'required|string|max:50',
             'HdV' => 'required|string',
+            'current_contract' => 'required|string',
             'EPS' => 'required|string',
             'AFP' => 'required|string',
             'ARL' => 'required|string',

@@ -61,6 +61,7 @@ return new class extends Migration
                 ->cascadeOnUpdate()
                 ->restrictOnDelete();
             $table->string('HdV');
+            $table->string('current_contract');
             $table->string('EPS');
             $table->string('AFP');
             $table->string('ARL');

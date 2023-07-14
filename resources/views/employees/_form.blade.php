@@ -63,22 +63,8 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
 
-    {{-- Fecha de nacimiento --}}
-    <div>
-        <label for="date_of_birth" class="block mb-2 font-bold dark:text-white">{{ __('Date Of Birth') }}
-            <span class="text-xs text-red-600">
-                @error('date_of_birth')
-                    ({{ $message }})
-                @enderror
-            </span>
-        </label>
-        <input type="date" id="date_of_birth" name="date_of_birth"
-            value="{{ @old('date_of_birth', $employee->date_of_birth) }}"
-            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
-    </div>
-
-    {{-- Tipo de sangre --}}
-    <div>
+     {{-- Tipo de sangre --}}
+     <div>
         <label for="blood_type_id" class="block mb-2 font-bold dark:text-white">{{ __('Blood type') }}
             <span class="text-xs text-red-600">
                 @error('blood_type_id')
@@ -96,6 +82,20 @@
                 <option value="">{{ __('No records available') }}</option>
             @endforelse
         </select>
+    </div>
+
+    {{-- Fecha de nacimiento --}}
+    <div>
+        <label for="date_of_birth" class="block mb-2 font-bold dark:text-white">{{ __('Date Of Birth') }}
+            <span class="text-xs text-red-600">
+                @error('date_of_birth')
+                    ({{ $message }})
+                @enderror
+            </span>
+        </label>
+        <input type="date" id="date_of_birth" name="date_of_birth"
+            value="{{ @old('date_of_birth', $employee->date_of_birth) }}"
+            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
 
     {{-- Genero sexual --}}
@@ -198,8 +198,7 @@
             value="{{ @old('optional_phone', $employee->optional_phone) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
-</section>
-<section class="p-4 pt-0">
+
     {{-- estado civil --}}
     <div>
         <label for="civil_status_id" class="block mb-2 font-bold dark:text-white">{{ __('Civil status') }}
@@ -220,6 +219,25 @@
             @endforelse
         </select>
     </div>
+
+    {{-- estrato socieconomico --}}
+    <div>
+        <label for="socioeconomic_stratum"
+            class="block mb-2 font-bold dark:text-white">{{ __('socioeconomic Stratum') }}
+            <span class="text-xs text-red-600">
+                @error('socioeconomic_stratum')
+                    ({{ $message }})
+                @enderror
+            </span>
+        </label>
+        <input type="text" id="socioeconomic_stratum" name="socioeconomic_stratum"
+            value="{{ @old('socioeconomic_stratum', $employee->socioeconomic_stratum) }}"
+            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+    </div>
+
+    
+</section>
+<section class="p-4 pt-0">
     {{-- composicion familiar --}}
     <div>
         <label for="family_composition" class="block mb-2 font-bold dark:text-white">{{ __('Family composition') }}
@@ -383,8 +401,6 @@
 </section>
 
 <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 pt-0">
-
-
     {{-- Hoja de vida --}}
     <div>
         <label for="HdV" class="block mb-2 font-bold dark:text-white">{{ __('HdV') }}
@@ -395,6 +411,20 @@
             </span>
         </label>
         <input type="text" id="HdV" name="HdV" value="{{ @old('HdV', $employee->HdV) }}"
+            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+    </div>
+
+    {{-- Contrato actual --}}
+    <div>
+        <label for="current_contract" class="block mb-2 font-bold dark:text-white">{{ __('Current contract') }}
+            <span class="text-xs text-red-600">
+                @error('current_contract')
+                    ({{ $message }})
+                @enderror
+            </span>
+        </label>
+        <input type="text" id="current_contract" name="current_contract"
+            value="{{ @old('current_contract', $employee->current_contract) }}"
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
 
@@ -498,20 +528,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
 
-    {{-- ESTRATO SOCIECONOMICO --}}
-    <div>
-        <label for="socioeconomic_stratum"
-            class="block mb-2 font-bold dark:text-white">{{ __('socioeconomic Stratum') }}
-            <span class="text-xs text-red-600">
-                @error('socioeconomic_stratum')
-                    ({{ $message }})
-                @enderror
-            </span>
-        </label>
-        <input type="text" id="socioeconomic_stratum" name="socioeconomic_stratum"
-            value="{{ @old('socioeconomic_stratum', $employee->socioeconomic_stratum) }}"
-            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
-    </div>
+   
 
     <div class="col-span-2 flex justify-end">
         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">{{ __('Save') }}</button>
