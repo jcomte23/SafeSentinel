@@ -22,6 +22,7 @@ class EmployeeRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'state_id' => 'nullable|numeric|min:0',
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'types_of_document_id' => 'required|numeric|min:0',

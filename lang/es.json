@@ -49,6 +49,9 @@
     "Salary":"Salario",
     "Work schedule":"Jornada laboral",
     "Current contract":"Contrato actual",
+    "Person State":"Estado",
+    "Active":"Activo",
+    "Inactive":"Inactivo",
 
 
     "(and :count more error)": "(y :count error más)",

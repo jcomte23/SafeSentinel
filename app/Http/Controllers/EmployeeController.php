@@ -79,7 +79,7 @@ class EmployeeController extends Controller
         $schoolGrades = SchoolGrades::all();
         $salaries = Salary::all();
         $workSchedules = WorkSchedules::all();
-        return view('employees.edit', compact('typesOfDocuments',
+        return view('employees.edit', compact('employee','typesOfDocuments',
         'InternationalPhoneCodes', 
         'typesOfGenres',
         'bloodTypes',

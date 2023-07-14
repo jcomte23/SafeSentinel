@@ -1,4 +1,11 @@
 @csrf
+
+@if (isset($employee))
+    <input type="hidden" id="state_id" name="state_id" value="{{ @old('state_id', $employee->state_id) }}">
+@else
+    <input type="hidden" id="state_id" name="state_id" value="1">
+@endif
+
 <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
     {{-- Nombres --}}
     <div>
@@ -63,8 +70,8 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
 
-     {{-- Tipo de sangre --}}
-     <div>
+    {{-- Tipo de sangre --}}
+    <div>
         <label for="blood_type_id" class="block mb-2 font-bold dark:text-white">{{ __('Blood type') }}
             <span class="text-xs text-red-600">
                 @error('blood_type_id')
@@ -235,7 +242,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
 
-    
+
 </section>
 <section class="p-4 pt-0">
     {{-- composicion familiar --}}
@@ -528,7 +535,7 @@
             class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
     </div>
 
-   
+
 
     <div class="col-span-2 flex justify-end">
         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">{{ __('Save') }}</button>
